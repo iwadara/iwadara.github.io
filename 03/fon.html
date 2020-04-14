@@ -1,0 +1,179 @@
+<HTML><HEAD><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>だらだらとW-ZERO3 - W-ZERO3 で FON 一発設定</TITLE>
+<style type="text/css">
+<!-- 
+a:link{text-decoration:underline;color:navy}
+a:visited{text-decoration:underline;color:blue}
+a:active{text-decoration:none;color:navy}
+a:hover{text-decoration:none;color:blue;background-color:#bbbbbb}
+div.body {
+	clear: both;
+}
+-->
+</style>
+<!-- Google AdSence -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5937086929726411",
+          enable_page_level_ads: true
+     });
+</script>
+<!-- Google AdSence [END] -->
+</HEAD>
+<BODY bgcolor="#F3F3FF" leftmargin=9>
+<BASEfont face="MS UI Gothic">
+<BR><BR>
+
+<p align=center>
+ <B style="font-size:24pt; color:navy">W-ZERO3 で FON 一発設定</B>
+</p>
+<p align=right>2007年2月4日 更新</p>
+<BR><H4>概要</H4>
+　WiFi共有サービスとして日本でも爆発的に増えているFONが我が家にも到着しました。<BR>
+　FONルータ「La Fonera」をW-ZERO3単体で初期設定を行います。<BR><BR>
+
+<HR><BR>
+
+<H4>■ 到着したらLa Foneraを接続</H4>
+<table>
+<tr>
+	<td valign="top" width="50%">
+		<ol>
+		<li>ネットワークに繋がっているLANケーブルをLa FoneraのINTERNETポートに接続します。
+		<li>ACアダプタを電源にさし、La FoneraのDC INポートに接続します。
+		<li>INTERNETライトとPOWERライトが点灯したことを確認します。
+		<li>W-ZERO3で無線LANの使用をONにします。<BR>
+			（具体的には [スタートバーのアンテナ表示をクリック]-[設定]-[無線ON/OFF]）<BR>
+		<li><B><font color=crimson>「FON_AP」「MyPlace」が表示されることを確認</font></B>します。<BR>
+		<li>アクセスポイント<B><font color=crimson>「FON_AP」に接続</font></B>します。
+		</ol>
+		※「FON_AP」とは、<BR>
+		　　他のユーザに提供するパブリックなアクセスポイントです。<BR>
+		　　セキュリティはかかっていません。<BR>
+		※「MyPlace」とは、<BR>
+		　　家庭内で使うプライベートなアクセスポイントです。<BR>
+		　　WPAによるセキュリティが標準でかかっています。<BR>		
+	</td>
+	<td>
+		<img src="img/070204_fon1.jpg" width=400 height=300>
+	</td>
+</tr>
+</table>
+
+<H4>■ FONスポットの登録</H4>
+<table>
+<tr>
+	<td valign="top" width="50%">
+		自分のFONスポットを登録します。この工程を踏むことで、<BR>
+		<B><font color=crimson>メンバータイプ： linus</font></B> として、<BR>
+		他のユーザのアクセスポイントを利用できる権限が与えられます。<BR>
+		<ol>
+		<li>ブラウザから <a href="http://wifi.fon.com" target="_blank">http://wifi.fon.com</a> にアクセスします。
+		<li>User Zoneにログインします。<BR>
+			→ ユーザ登録したメールアドレスとパスワードを入力します。
+		<li>自分のFONスポットを登録します。アクセスポイントの住所を入力します。このときに選択するメンバータイプは linus です。
+		</ol>
+		※ 「メンバータイプ： linus」とは、<BR>
+		　　自分のFONスポットを他のユーザに無料で使ってもらうことで、<BR>
+		　　自分も他のFONスポットを無料で使うことができるユーザタイプです。
+	</td>
+	<td>
+		<img src="img/070204_fon2.jpg" width=400 height=300>
+	</td>
+</tr>
+</table>
+
+<H4>■ 「MyPlace」への接続</H4>
+<table>
+<tr>
+	<td valign="top">
+		W-ZERO3からプライベートな「MyPlace」へ接続します。<BR>
+		<ol>
+		<li>ワイヤレスネットワークの設定は「インターネット設定」のままでOKです
+		<li>認証： <B><font color=crimson>WPA-PSK</font></B><BR>
+			データ暗号化： <B><font color=crimson>TKIP</font></B><BR>
+			ネットワークキー： <B><font color=crimson>La Fonera の裏側にあるSNを入力（10桁）</font></B><BR>
+		</ol>
+	</td>
+</tr>
+	<td>
+		<img src="img/070204_fon3.jpg" width=400 height=300>
+	</td>
+	<td>
+		<img src="img/070204_fon4.jpg" width=400 height=300>
+	</td>
+</tr>
+</table>
+
+<BR>
+以上です。W-ZERO3単体で初期設定から接続まで無事にできました。
+<BR><BR>
+
+<H4>■ FONルータ「La Fonera」の仕様</H4>
+<table border=1 bordercolor=navy cellpadding=5>
+<tr>
+	<th colspan=2 bgcolor=white align=left>
+	「La Fonera」仕様
+	</th>
+</tr>
+<tr>
+	<td>
+	無線規格
+	</td>
+	<td>
+	IEEE 802.11g / IEEE 802.11b
+	</td>
+</tr>
+<tr>
+	<td>
+	帯域幅
+	</td>
+	<td>
+	54 （単位・Mbps）
+	</td>
+</tr>
+<tr>
+	<td>
+	セキュリティ
+	</td>
+	<td>
+	WiFi Protected Access (WPA) / WEP / WPA2
+	</td>
+</tr>
+<tr>
+	<td>
+	寸法(W×H×D)
+	</td>
+	<td>
+	93.5×25.5×70 (mm)
+	</td>
+</tr>
+<tr>
+	<td>
+	重量
+	</td>
+	<td>
+	95g (アンテナ除)
+	</td>
+</tr>
+</td>
+</tr>
+</table>
+
+<H4>■ FONについてもっと詳しく知りたい方はこちら</H4>
+<ul>
+<li><a href="http://jp.fon.com/">FON 公式サイト</a><BR><BR>
+<li><a href="http://fon-wiki.maniado.com/index.php?FrontPage">FONまとめWiki</a><BR><BR>
+<li><a href="http://www.tsukumo.co.jp/fon/about_lafonera.html">FON の接続・登録 (TSUKUMO)</a><BR>
+	TSUKUMOが設定方法や概要をまとめている。非常にわかりやすく、参考になる。<BR><BR>
+<li><a href="http://blogs.itmedia.co.jp/ogura/2007/01/fon_bcc0.html">FONは、ちょっとむずかしすぎる？ (テクノロジー解放日記)</a><BR>
+	2007年1月22日の記事。FONのわかりにくい点を的確にまとめている。<BR><BR>
+</ul>
+
+<HR>
+
+<p align="right">管理人：いわだら　[ <a href="mailto:date18@gmail.com">date18@gmail.com</a> ]</p>
+<div align=center><a href="index.html">↑↑戻る↑↑</a></div>
+</BODY>
+</HTML>

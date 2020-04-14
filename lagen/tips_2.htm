@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>だらだらとl'agenda BE-500 - Tips 2</title><style type="text/css"><!--a:link{text-decoration:underline;color:#FF80C0}a:visited{text-decoration:underline;color:#FF8040}a:active{text-decoration:none;color:#FF80FF}a:hover{text-decoration:underline;color:#FF240C}--></style>
+<!-- Google AdSence -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5937086929726411",
+          enable_page_level_ads: true
+     });
+</script>
+<!-- Google AdSence [END] -->
+</head><body leftmargin="9" style="background-color: rgb(243, 243, 255);"><div align="center"><!--#geoguide--></div><basefont face="MS UI Gothic">
+<p align="center"> <u style="font-size: 24pt; color: rgb(170, 34, 255);">だらだらと <font face="Garamond">l'agenda BE-500 - <b>Tips 2</b></font></u>
+</p><hr color="#eeeeee" width="70%"><br>
+<hr color="#dddddd" width="80%"><br><div align="center"><h2><font color="crimson">ソ
+フトウェアの導入について &lt;入門者向け&gt;</font></h2></div>
+<p align="right">2004年1月22日 更新</p>
+<h3></h3>l'agendaはシェルが独自であるため、Windowsといえどもいつも見慣れているウィンドウズスター
+トやデスクトップが存在しません。同期ソフトも独自のもので、ActiveSyncを使わずにCASSIOPEIA
+PC接続というソフトから同期やソフトのインストールを行います。l'agendaは不揮発性フラッシュメモリ (Nand Disk)
+と揮発性のRAMという二重構造でファイルを管理しています。内、フラッシュメモリにあたるのは<b style="">Nand
+Disk以下のフォルダであり、それ以外のフォルダはリセットするとデータが消えてしまいます</b>。ソフトウェアやファイルなどはくれぐ
+れもNand Disk以下に置くようにしましょう。ちなみにl'agendaは<b style="">「Nand
+Disk\Program Files\Patch」フォルダにファイルを置いておけば起動時に自動的にWindowsフォルダに送ってくれる</b>役
+割があるので、必要なDLLなどはこちらに置いておけば良いでしょう。<p></p><br>
+<h3>コンパクトフラッシュ（CF）カードから直でインストール</h3>
+<p>ソフトウェア導入の際、l'agenda対応のものであればCASSIOPEIA
+PC接続経由からセットアップするのが通常のインストールです。では、クレードルがない場合やUSB接続できない環境にある場合はインストールができない
+のかと言ったら、そうではありません。l'agendaはCFカードから直でインストールできてしまいます。もちろん、インストール先も本体・カードと選
+択できます。<br><br>
+<table border="3" bordercolor="#f3f3ff" cellpadding="3"><tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bordercolor="#004444">1.CFにソフトをフォルダごとコピー<br>
+2.l'agenda上でファイラを起動して「.cbea」ファイルを実行<br>
+3.クレードルからと同じようにインストールできる<br>
+<b style="">※インストール後、「.cbea」ファイルは消える</b>
+</td></tr></tbody></table><br>
+ここでいうファイラですが、標準に付いてくるソフト「ファイル管理」では実行できません。<a href="http://tillanosoft.com/ce/lagendapackj.html" target="_blank">Tillanosoft l'agenda pack</a>に入っている
+「Tillano Explorer」か、<a href="http://homepage2.nifty.com/qta/tq/index.htm" target="_blank">GSFinder+TQ</a>（MIPS版）を利用してください。</p><br>
+<h3>Palm-sizePC、MIPS版のソフトを動かす</h3>
+<p>l'agendaに正式対応しているソフト以外にも、便利で使いやすいソフトは数多くあります。<b style="">Palm
+-sizePC（PsPC）用のソフト</b>であればほとんどのものが動作します。これはAPIがPsPCベースであるため。
+l'agendaがサポートしているのは、PsPCのAPIだと考えられます。PocketPC用のAPIはサポートしていないので、ぴくりとも動きませ
+ん。 PsPCソフトをCFの「Program Files」に入れれば、トップメニューに自動的に表示され、実行できるようになります。</p>
+<p>WindowsCE系のソフトをダウンロードする場合に「ARM、MIPS、SH3」などがバージョンとして分けられていることがあり
+ます。これらはWindowsCE機に搭載されているCPUの種類です。<b style="">l'agendaのCPUは
+MIPS</b>（ミプス）なので、バージョンが分かれていたらMIPS版を迷わずクリックしましょう。仮にMIPS用以外のアプリケーショ
+ンを実行しても動作しません。MIPS用でも起動時にエラーが出てきてしまう場合は「あきらめる」のが一番です。例外としてダミーDLLなどの導入によっ
+て動くものもありますが、ここではあきらめが肝心ということでお願いします。</p>
+<p>ソフトの中にはCABファイルで配布をしているソフトもあります。本来のWindowsCE機ならばそのままインストールできるのです
+が、l'agendaにはこの機能はありません。手動で展開をして実行ファイルを取り出す必要があります。私はCABファイルを自動リネームしてくれるソ
+フト「cab_renamer」を使わせていただいています。cab_renamer の入手は泡の杜別館「モモ・ハウス」さんからお願いします。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;→ <a href="http://hakaku.hp.infoseek.co.jp/ppp/memo.shtml#11" target="_blank">泡の杜別館「モモ・ハウス」</a></p>
+<p>使用方法はいたって簡単、Windowsパソコン上から入手した cab_renamer.exe
+に*.cabファイルをドラッグするだけ。CABリネームの手間が一気に解消です。展開されたファイルをl'agendaのProgram
+Files上に置いて実行あるのみです。</p>
+<br><hr color="#dddddd" width="80%"><br>
+<hr color="#eeeeee" width="70%"><br><p align="right">管理人：いわだら
+&nbsp;&nbsp;[ <a href="mailto:date18@gmail.com">date18@gmail.com</a>
+]</p>
+<br>
+<div align="center"><a href="index.html">↑↑戻る
+↑↑</a></div>
+</body></html>

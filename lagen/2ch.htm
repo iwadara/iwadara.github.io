@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>だらだらとl'agenda BE-500 - 2ch拾得情報</title><style type="text/css"><!--a:link{text-decoration:underline;color:#FF80C0}a:visited{text-decoration:underline;color:#FF8040}a:active{text-decoration:none;color:#FF80FF}a:hover{text-decoration:underline;color:#FF240C}--></style>
+<!-- Google AdSence -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5937086929726411",
+          enable_page_level_ads: true
+     });
+</script>
+<!-- Google AdSence [END] -->
+</head><body leftmargin="9" style="background-color: rgb(243, 243, 255);"><div align="center"><!--#geoguide--></div><basefont face="MS UI Gothic">
+<p align="center"> <u style="font-size: 24pt; color: rgb(170, 34, 255);">だらだらと <font face="Garamond">l'agenda BE-500 - <b>2ch あさり</b></font></u>
+</p><hr color="#eeeeee" width="70%"><br>
+<hr color="#dddddd" width="80%"><br><p>
+<font color="crimson" size="5">パソコン上からエクスプローラを動かす</font><br><br>
+<font size="2">カシオペアPC接続ではエクスプローラーが無いためパソコンからのファイル管理が困難。<br>
+そこで無理矢理アクティブシンクで接続してアクティブシンクのエクスプローラーを利用。<br>
+</font></p><h5><font size="2">１．準備１</font></h5>
+<font size="2">下記サイトよりラジェンダＳＤＫをダウンロード<br>
+<a href="http://cassiopeia.casio.co.jp/windowscefan/contest_3rd/lagenda_sdk.html" target="_blank">http://cassiopeia.casio.co.jp/windowscefan/contest_3rd/lagenda_sdk.html</a><br>
+解凍して以下のファイルを取り出す。<br>
+\BE500SDK_1119\Development Tools\Program Files\ExeRepllog.exe<br>
+残りはややこしいから捨てる。<br>
+</font><h5><font size="2">２．準備２</font></h5>
+<font size="2">下記サイトよりアクティブシンクを入手。インストール。<br>
+<a href="http://www.microsoft.com/japan/mobile/downloads/activesync37.asp" target="_blank">http://www.microsoft.com/japan/mobile/downloads/activesync37.asp</a><br>
+ＵＳＢ接続を有効にしておく。<br>
+</font><h5><font size="2">３．ラジェンダ側１</font></h5>
+<font size="2">ＣＦ経由、その他でラジェンダにExeRepllog.exeを\Nand
+Disk\Program Files内に転送。<br>
+</font><h5><font size="2">４．ラジェンダ側２</font></h5>
+<font size="2">[HKEY_LOCAL_MACHINE\SOFTWARE\MENU\ExeRepllog]<br>
+"APPNO"=dword:00000001<br>
+"ULOAD"=dword:00000001<br>
+"APATH"="\Nand Disk\Program Files\ExeRepllog.exe"<br>
+"ANAME"="ActiveSync強制接続"　←お好きな名前に<br>
+ハードリセットかけると標準メニューに追加される。<br>
+</font><h5><font size="2">５．接続</font></h5>
+<font size="2">１）カシオペアＰＣ接続が稼働している場合これを終了させる。<br>
+２）ラジェンダをクレードルに乗せる。しばらく母艦（ActiveSync)もラジェンダも<br>
+　接続努力をするが繋がらない。<br>
+３）ラジェンダ側でExeRepllog.exeを稼働させると一発で繋がる。
+</font><p></p><br>
+<p><font color="crimson" size="5">英和辞書検索ソフトの導入</font>（Vol.8
+前半）<br><br>
+<font size="2">Personal Dictionary for Windows CE(PDIC for
+CE)<br>
+<a href="http://member.nifty.ne.jp/TaN/pdicce.html" target="_blank">http://member.nifty.ne.jp/TaN/pdicce.html</a><br>
+DICの入手<br>
+<a href="http://homepage1.nifty.com/yoshi_2000/FIRST.HTM#install" target="_blank">http://homepage1.nifty.com/yoshi_2000/FIRST.HTM#install</a><br>
+ダミーのNote_prj.dllをPDIC.exeと同じフォルダに入れてやれば<br>
+PsPC用最新版も動く。<br>
+<h4>eXpodでの動かし方</h4>
+eXpod上ではPPC、H/PC、PsPCすべてエラーが起きてしまう。<br>
+<b>\My Documents フォルダ作成</b>
+すれば起動するようになる。ただ、リセットかけるたびに消えてしまうので、<br>
+nScriptを用いてスタートアップ登録、自動化をする。<br>
+1.makeMyDocuments.ns　↓をメモ帳で書いて　nScript　のフォルダに入れる <br>
+------------------------------------------- <br>
+function main()<br>
+{<br>
+name = "\My Documents";<br>
+if(CreateDirectory(name) == -1 ){<br>
+puts("%name%を作成できません");<br>
+}else{<br>
+puts("%name%を作成しました");<br>
+}<br>
+exit;<br>
+}<br>
+-------------------------------------------<br>
+2.nScriptのショートカットを\Nand Disk\System\Programs\StartUpに入れて<br>
+　プロパティのショートカット内容を↓にする<br>
+　"\Nand Disk\Program Files\nScript\ns.exe" "makeMyDocuments.ns"<br>
+3.これでPDIC使ってても何時でもリセット可能。<br><br>
+nScript<br>
+<a href="http://www.nakka.com/soft/ns/" target="_blank">http://www.nakka.com/soft/ns/</a>
+</font></p><br>
+<font color="crimson" size="5">ブラウザの最大表示サイズを変更する</font><br><br>
+<font size="2"><b>[HKEY_CURRENT_USER\Software\Tenik\WorldTALK]</b><br>
+"MaxHTMLSize"=dword:00300000<br>
+"MaxMemSize"=dword:00300000<br>
+<b>[HKEY_CURRENT_USER\Software\Tenik\WorldTALK\Images]</b><br>
+"MaxMemAllImage"=dword:00300000<br>
+"MaxMemOneImage"=dword:00300000<br><br>
+TascalRegEditなどのレジストリエディタにて以上のように値をします。<br>
+MaxHTMLSizeは、その字が示すとおり最大HTMLのサイズです。<br>
+同様にMaxMemSizeは最大メモリサイズ。<br>
+MaxMemAllImage、MaxMemOneImageが画像(image)に関する設定です。
+</font><p></p><br>
+<p><font color="crimson" size="5">付属クレードル経由でネッ
+ト</font>（<a href="http://pc3.2ch.net/test/read.cgi/mobile/1072272780/" target="_blank">Vol.13</a> &gt;&gt;49）<br><br>
+<font size="2">1.ActiveSyncでつながないと無理みたい（標準のPC接続だとできません・・・）<br>
+2.ここでBlackJumboDogを拾ってくる<br>
+　<a href="http://homepage2.nifty.com/spw/software/bjd/" target="_blank">http://homepage2.nifty.com/spw/software/bjd/</a><br>
+3.とりあえず自分のIPを確かめる<br>
+4.PC接続設定（？）で新しい通信セットで接続　LAN、ブラウザで使用するにチェック<br>
+　LANカードアダプタのところは変更しない<br>
+　ドメイン名とかも変更しない<br>
+　接続IDに任意の文字列（Userとか）Passは空白<br>
+　ブラウザの接続　Proxyサーバを使うにチェックを入れて<br>
+　Proxy: 2で調べた自分のIP Port:8080で完了を押す<br>
+5.BlackJumboDog を起動して設定→プロキシーサーバを選択<br>
+　プロキシーサーバを使用する、にチェックを入れる<br>
+　クライアントから見たポートは8080<br>
+　それで、利用者タブを選択して 名前 のところに4の接続IDで決めた任意の文字列を入れる<br>
+　アドレスの所に2で調べた自分のIPを入れる<br>
+6.ブラウザを起動してアドレスを入れればページが表示される<br>
+　また、hikkyで使う場合はproxy設定で上と同様に調べた自分のIPとポート8080で設定すればOK
+</font></p><br>
+<p><font color="crimson" size="5">l'agendaでリモー
+トデスクトップ</font>（Vol.3 &gt;&gt;639）<br><br>
+<font size="2">1.WindowsXPのインストーラから「HPCRDP.EXE」というのを検索する<br>
+2.HPCRDP.EXEをWindowsOS上で起動する<br>
+　解凍指定のフォルダがデフォルトでは「.\nantoka」という風になるが、「c:\HDCRDP」みたいに絶対パスで指定した方がよい<br>
+3.解凍されたファイルのなかの「rdp.hpc_mips.CAB」を<a href="http://hakaku.hp.infoseek.co.jp/ppp/memo.shtml#11" target="_blank">cab_renamer.exe</a>にドロップしてさらに解凍<br>
+4.l'agendaに解凍したものを同一フォルダに入れる。容量が気になっていらないものは適宜削除する<br>
+5.l'agenda上でmstsc40.exeを起動する。「Server:」にサーバのＩＰアドレス入れて、「Connect」ボタンで接続<br>
+<h5>右クリックができるように</h5>
+「WindowsOS側でどうにかする」というヒントをもとに、自分なりに解決できました。<br>
+<a href="http://deki.psv.org/down.htm" target="_blank">http://deki.psv.org/down.htm</a><br>
+ここにある「できクリック」。操作方法、概念がかなり分かりづらいけど、これでなんとか左クリック、右クリックともに可能になります。なんかのデバイスの
+補助ソフトらしくて、全然用途違うみたいだけどね…<br>
+</font></p><br>
+<p><font color="crimson" size="5">スケジューラに祝日を登録
+する</font>（Vol.3）<br><br>
+<font size="2">1.パソコン側でOutlookを起動<br>
+　「ツール」→「オプション」を選択し、「予定表オプション」ボタンをクリック<br>
+2.「祝日の追加」ボタンをクリック。「予定表に祝日を追加」画面が表示されたら、“日本”にチェックを合わせて「OK」<br>
+3.Outlookを閉じ、PC接続でスケジュールの同期をとる<br>
+</font></p><br>
+<p><font color="crimson" size="5">バッテリー関連</font><br><br>
+<font size="2">「携帯電話の電池を入れている」というアイディアを聞いて、<br>
+<a href="http://www.rakuten.co.jp/ecojiji/" target="_blank">http://www.rakuten.co.jp/ecojiji/</a>
+にて電池を買いました。N2002のものです。<br>
+「電池パックＮ02」大きさはぴったりで、容量も740mAですからほとんど純正同様です。<br>
+電池の持ちはこれからチェックしますが、うまくいけば非常に安上がりかと思います。<br>
+</font></p><br>
+<p><font color="crimson" size="5">操作関連</font><br><br>
+<font size="2">ソフトキーボードで<br>
+「Ctrl + C」コピー<br>
+「Ctrl + X」切り抜き<br>
+「Ctrl + V」貼り付け<br>
+「Ctrl + Z」やり直し<br><br>
+<b>文字をキーボード外にドラッグすると</b><br>
+　日本語キーボード・・・小文字になる<br>
+　ローマ字キーボード・・・Shift押し状態の文字が入力できる<br>
+　（/をキーボード外にドラッグすれば@をすばやく入力できる）<br><br>
+電源まわり<br>
+「電源 + ↑↓」コントラストの調整<br>
+「電源 + ←→」明るさの調整<br>
+「電源 + OK」タッチスクリーンの補正<br>
+「ESC + 電源」"Bye..."待ち無し電源OFF（場合によって「OK + 電源」でも可）
+</font></p><br>
+<hr color="#dddddd" width="80%"><br><hr color="#eeeeee" width="70%"><br>
+<p align="right">管理人：いわだら&nbsp;&nbsp;[ <a href="mailto:date18@gmail.com">date18@gmail.com</a>
+]</p>
+<br>
+<div align="center"><a href="index.html">↑↑戻る
+↑↑</a></div>
+</body></html>

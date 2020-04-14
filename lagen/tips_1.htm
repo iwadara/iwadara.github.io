@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>だらだらとl'agenda BE-500 - Tips 1</title>
+<style type="text/css"><!--a:link{text-decoration:underline;color:#FF80C0}a:visited{text-decoration:underline;color:#FF8040}a:active{text-decoration:none;color:#FF80FF}a:hover{text-decoration:underline;color:#FF240C}--></style>
+<!-- Google AdSence -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5937086929726411",
+          enable_page_level_ads: true
+     });
+</script>
+<!-- Google AdSence [END] -->
+</head><body leftmargin="9" style="background-color: rgb(243, 243, 255);"><div align="center"><!--#geoguide--></div><basefont face="MS UI Gothic">
+<p align="center"> <u style="font-size: 24pt; color: rgb(170, 34, 255);">だらだらと <font face="Garamond">l'agenda BE-500 - <b>Tips 1</b></font></u>
+</p><hr color="#eeeeee" width="70%"><br>
+<hr color="#dddddd" width="80%"><br><div align="center"><h2><font color="crimson">「Yahoo!BB
+無線LANパック」＋「プラネックス GW-CF11H」で無線LAN</font></h2></div>
+<p align="right">2004年1月18日 更新</p>
+　(1) 準備<br>
+　　<font color="orange">●</font>Windows CE3.0対応のドライバ「<b>gw-cf11h.exe</b>」
+をダウンロードする<br>
+　　　→ <a href="http://www.planex.co.jp/product/bwave/gwcf11h.shtml" target="_blank">PLANEX: PRODUCT: bRoadLannerWave: GW-CF11H</a><br><br>
+　　<font color="orange">●</font>CASSIOPEIA l'agenda
+BE-500のアップデートを済ませる<br>
+　　　→ <a href="http://www.casio.co.jp/lagenda/" target="_blank">CASSIOPEIA l'agenda BE-500</a><br><br>
+　　<font color="orange">●</font>YahooBB!
+無線MODEM側で「WEP(暗号化)キー設定」や「MACフィルタ」を有効にしている場合は無効にしておく<br>
+　　　無事に無線LANがつながってから設定しても遅くはないので。何も設定していない場合はそのままで<br><br><br>
+　(2) 適当な場所に解凍して「<b>BE-500フォルダのsetup.exe</b>」を起動、CASSIOPEIA
+PC接続をしてインストール<br><br><br>
+　　――― ここからが大事 ―――<br><br>
+<!--
+　(3) gw-cf11h.exeを解凍した<font color=crimson>トップにある4つのファイルを「<B>\Nand Disk\Program Files\Patch</B>」にコピー</font><BR>
+　　（cf11hnds.sys、OEMSETUP.INF、wlanioc.vxd、WLANNIC.INF）<BR><BR><BR>
+-->　(3)
+l'agendaトップメニューから「<b>通信設定</b>」を起動 → 「<b>新しい通信セット</b>」
+を選択<br>
+<table border="3" bordercolor="#ffffff" cellpadding="4"><tbody><tr><td width="10">
+&nbsp;
+</td><td bordercolor="#AAAAFF" bgcolor="#eeeeff">
+通信セット名：（任意、「無線LAN Card」などわかりやすい名前で良い）<br><br> 通信セット：<font color="crimson">LAN接続</font><br><br>
+「⇒」をタップ、自動的に取得するのチェックをはずして、TCP/IP設定にて下記の値を固定設定する<br><br>
+　　LANカードアダプタ：<font color="crimson">GW-CF11H Wirelss LAN CF
+Card</font><br>
+　　LAN IPアドレス：<font color="crimson">192.168.3.3</font><br>
+　　サブネット マスク：<font color="crimson">255.255.255.0</font><br>
+　　ゲートウェイ：<font color="crimson">192.168.3.1</font><br><br>
+　　<font color="crimson">※ 複数の無線PCを使っている場合は<b>LAN
+IPアドレス</b>が重複しないように設定をする</font><br><br>
+「⇒」をタップ、自動的に取得するのチェックをはずして、DNS設定をする<br><br>
+　　ドメイン名：（空欄）<br>
+　　DNS1：<font color="crimson">43.224.255.1</font><br>
+　　DNS2、WINS1、WINS2は（空欄）のまま完了する<br>
+　　（LAN接続 ログイン設定は必要ない。メールアドレス、Proxyについては必要は場合のみ記入）
+</td></tr></tbody></table><br><br>
+　(4) CF型無線LAN Card、GW-CF11Hをl'agendaに挿す<br>
+　　<font color="crimson">※ 認識しない場合は<b>2、3分 間を置いて再度挿す</b>の
+が一番効果的（電源を切る、リセットもやる価値はある）</font><br><br><br>
+　(5) CFカードを認識（Linkランプが点滅→点灯）したらl'agendaトップメニューから「<b>GW-CF11H
+Utility</b>」を起動<br>
+　　[ 設定タブ ]<br>
+　　　ESS IDを<font color="crimson">固定設定「<b>YBBUser</b>」</font>に
+する<br>
+　　　通信モードは<font color="crimson">インフラストラクチャーモード</font>の
+まま<br>
+　　　通信速度はとりあえずAuto<br><br><br>
+　――以上で「<b>設定</b>」を押して再起動すればすべての設定が完了<br><br>
+　　l'agendaブラウザを起動<br>
+　　[ 機能 ] → [ 設定 ] で<b>使用する通信セットが「通信セット名」になっていることを確認</b>して、<br>
+　　GoogleなりYahooなりにつなげてみて、しばらく巡回しても途切れないことを確認したら、<br>
+　　無線MODEM側で「WEP(暗号化)キー設定」や「MACフィルタ」を有効にするなり好きにする<br><br>
+<hr color="orange" width="85%"><br><br><center><h2><font color="crimson">＜コメント＞</font></h2></center><br>
+<p>　通信設定でIPアドレスやゲートウェイ、DNSを自動的に取得してくれない事を知るのに半日。ESS
+IDを自動設定にしては認識しないことに気づくのにも時間がかかった。ここでブラウザから適当なページ（Google）を表示することができた。ようやく
+終了かと思いきや、おかしなこと挙動が起こる。<br><br>
+　一瞬はつながるようになったのだが、すぐに接続が切れ、「サーバー名の取得に失敗しました」というエラーメッセージがでてしまう。再度挿しなおすも症状
+は治らず。カードを抜き差しすると認識できないことも多く、リセットしたり電源を切ったりするのにまた時間がかかった。結果的に2～3分程度カードを放置
+してから挿すのが一番認識してくれるようだ。<br><br>
+　インフラストラクチャーじゃなくてアドホックで試してみたり、通信速度がいけないのか、LAN
+ログインIDとPASSを入力しなければならないのかと試行錯誤。結局、エラーが出てははずして、2、3分放置して、また挿しての繰り返しで接続できると
+きがあるので、それで妥協した。途中で途切れてしまう理由はわからずじまいだ。<br><br>
+　2ch モバイル板 ラジェンダスレ過去ログ置き場[<a href="http://himalayanakiusagi.net/2chlog/" target="_blank">http://himalayanakiusagi.net/2chlog/</a>]
+の「(その1)<a href="http://himalayanakiusagi.net/2chlog/2chlagenda01.html" target="_blank">New★★Casiopea　BE-300　いいぞ！■■</a>
+(261KB) 2001/09/05～」で過去の事例がないかログを見ていたら以下の書き込みが。<br><br>
+</p><hr color="black"><font size="2">595
+：いつでもどこでも名無しさん ：01/11/13 22:04 ID:??? <br>　　既出だけど、メルコのCF型無線LANカード
+WLI-CF-S11Gを使って<br>　　みました。ドライバは、PPC用のCABファイルをepods用の<br>　　
+wceloadで自動インストールさせました。レジストリを設定変更<br>　　以外はいじらなくていいので楽です。<br><br>　
+　DLLファイルは、\Windowsにインストールされるので、リセット<br>　　時に消えます。そこで、パスが通っていて保存される<br>　
+　\Nand Disk\Program Files 以下に移したら、電源ON/OFF時に<br>　　フリーズが発生。\Windows
+以下にないとダメなようです。<br>　　かと言って、リセット時にいちいち手動でコピーするのも<br>　　面倒です。解決方
+法として、アップデートパック導入時にできた<br>　　\Nand Disk\Program Files\Patch
+以下にファイルを置いておき<br>　　ました。リセット時に\Windows へコピーしてくれるようです。<br><br>　
+　ブラウザで実効速度を測ってみたら、640Kbps程度。1Mbps か<br>　　2Mbps
+ぐらいでアクセスポイントへつながっている感じ。<br>　　レジストリをいじって、設定を変えてみたけど変化なし。<br>　
+　マシンパワーのせい？<br><br><br>
+596 ：いつでもどこでも名無しさん ：01/11/13 22:46 ID:??? <br>　　&gt;&gt;
+595<br>　　なるほどー。<br>　　\Nand Disk\Program
+Files\PatchにWCFSGNDS.dllを置いてリセット<br>　　したら、挿したまま電源をオン・オフしても大丈夫になりまし
+た。<br>　　なお、DLLは3つありますが、動作にはWCFSGNDS.dllだけあればOK<br>　　のようです。<br><br>　
+　実効速度ですが、こちらでもまったく同じ640kbpsという結果です。<br>　　まあこれだけ出ていればいいと思いますけど。<br><br><br>
+597 ：595 ：01/11/14 01:03 ID:??? <br>　　&gt;&gt;596<br>　
+　実効速度やっぱりそれくらいですか。<br>　　まあ十分といえば十分なんですが、上げる方法があるのかなと。<br>　　他
+のPDAでもそれぐらいですかね？<br><br><br>
+598 ：いつでもどこでも名無しさん ：01/11/14 01:23 ID:??? <br>　　&gt;&gt;
+597<br>　　SA-1110 206MHz搭載のPocket
+PCで、WorldTALKの同じバージョン（2.2.24）を使った計測でも似たような数値になります。
+</font><hr color="black"><br>　\Nand
+Disk\Program Files\PatchにWCFSGNDS.dllを置いてみたが、CF無線LAN
+Cardが違うだけあって反応は得られなかった。当たり前か。とにかく長い旅であったので他の同じような症状の人の助けになればと思い、接続方法を記入、
+掲載にあたった。<br><br>
+　質問などあれば管理人：いわ <a href="mailto:yasu_i82@hotmail.com">yasu_i82@hotmail.com</a>（MSN
+Messenger対応）まで。
+<p></p><hr color="#dddddd" width="80%"><br>
+<hr color="#eeeeee" width="70%"><br><p align="right">管理人：いわだら
+&nbsp;&nbsp;[ <a href="mailto:date18@gmail.com">date18@gmail.com</a>
+]</p>
+<br>
+<div align="center"><a href="index.html">↑↑戻る
+↑↑</a></div>
+</body></html>
